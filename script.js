@@ -32,15 +32,18 @@ function getArray() {
             .then(numbers => filterEvenNumbers(numbers)) // Step 1: Filter even numbers
             .then(evenNumbers => {
                 // Update the DOM after 1 second (filtering step)
-                document.getElementById("output").innerText = `Even numbers: ${evenNumbers.join(', ')}`;
+                setTimeout(() => {
+                    document.getElementById("output").innerText = `Even numbers: ${evenNumbers.join(', ')}`;
+                }, 1000);
                 return evenNumbers; // pass the even numbers to the next promise
             })
             .then(evenNumbers => multiplyByTwo(evenNumbers)) // Step 2: Multiply even numbers by 2
             .then(finalNumbers => {
                 // Update the DOM after 2 more seconds (multiplying step)
-                document.getElementById("output").innerText = `Even numbers multiplied by 2: ${finalNumbers.join(', ')}`;
+                setTimeout(() => {
+                    document.getElementById("output").innerText = `Even numbers multiplied by 2: ${finalNumbers.join(', ')}`;
+                }, 2000);
             });
-
 
 
 
