@@ -1,5 +1,5 @@
 //your JS code here. If required.
-getArray()
+function getArray()
 	.then(numbers => filterEvenNumbers(numbers)) // Step 1: Filter even numbers
 	.then(evenNumbers => {
 		// Update the DOM after 1 second (filtering step)
